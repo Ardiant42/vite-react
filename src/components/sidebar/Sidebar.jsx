@@ -30,13 +30,13 @@ const Sidebar = () => {
           </li>
           <p className="title">LIST</p>
           <Link to="/users">
-            <li>
+            <li data-testid="users">
               <PersonOutlineIcon className="icon"></PersonOutlineIcon>
               <span>Users</span>
             </li>
           </Link>
           <Link to="/products">
-            <li>
+            <li data-testid="products">
               <CreditCardIcon className="icon"></CreditCardIcon>
               <span>Products</span>
             </li>

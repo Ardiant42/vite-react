@@ -34,18 +34,20 @@ const Login = () => {
 
   return (
     <div className="login">
-      <form onSubmit={handleLogin}>
+      <form data-testid="form" onSubmit={handleLogin}>
         <input
-          type="email"
-          placeholder="email" 
+          id = "email"
+          type = "email"
+          placeholder = "Enter your email" 
           onChange={(e) => setEmail(e.target.value)}
         />
         <input
-          type="password"
-          placeholder="password" 
+          id = "password"
+          type = "password"
+          placeholder = "Enter your password" 
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button type="submit">Login</button>
+        <button type="submit" data-testid="submit">Login</button>
         {error && <span>Wrong email or password!</span>}
       </form>
     </div>
