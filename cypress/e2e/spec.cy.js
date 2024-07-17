@@ -7,7 +7,7 @@ describe('template spec', () => {
     cy.get('input#email')
       .should('be.visible')
       .should('have.attr', 'placeholder', 'Enter your email')
-      .type('test@gmail.com').should('have.value', 'test@gmail.com')
+      .type('admin@store.com').should('have.value', 'admin@store.com')
 
     cy.get('input#password')
       .should('be.visible')
@@ -25,17 +25,21 @@ describe('template spec', () => {
       cy.get('[data-testid="users"]').click()
 
     cy.url().should('include', '/users')
+     
+    cy.get('[data-testid="categories"]').click()
 
-    cy.get('div.home')
+    cy.url().should('include', '/categories')
+
+    cy.get('[data-testid="addNew"]').click()
+
+    cy.get('input#title')
       .should('be.visible')
+      .should('have.attr', 'placeholder', 'Coffee')
+      .type('Appetizer').should('have.value', 'Appetizer')
 
-    cy.get('div.sidebar')
-      .should('be.visible')
+    cy.get('[data-testid="send"]').click()
 
-      cy.get('[data-testid="users"]').click()
-
-    cy.url().should('include', '/users')
-
+    cy.get('[data-testid="delete"]').click()
 
     })
 })

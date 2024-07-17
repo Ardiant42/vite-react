@@ -35,7 +35,7 @@ const Widget = ({ type }) => {
       break;
     case "order":
       data = {
-        title: "ORDERS",
+        title: "PRODUCTS",
         isMoney: false,
         link: "View all orders",
         query: "products",
@@ -52,10 +52,10 @@ const Widget = ({ type }) => {
       break;
     case "earning":
       data = {
-        title: "EARNINGS",
-        isMoney: true,
+        title: "CATEGORIES",
+        isMoney: false,
         link: "View net earnings",
-        query: "users",
+        query: "categories",
         icon: (
           <MonetizationOnOutlinedIcon
             className="icon"

@@ -24,6 +24,7 @@ const Datatable = ({columns}) => {
               <span
                 className="deleteButton"
                 onClick={() => handleDelete(params.row.id)}
+                data-testid="delete"
               >
                 Delete
               </span>
@@ -69,7 +70,7 @@ const Datatable = ({columns}) => {
     <div className="datatable">
       <div className="datatableTitle">
         {type.toUpperCase()}
-        <Link to={"/" + type + "/new"} className="link">
+        <Link to={"/" + type + "/new"} className="link" data-testid="addNew">
           Add New
         </Link>
       </div>
